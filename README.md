@@ -1,6 +1,6 @@
 Ask a question and get a full answer with cited sources:
 
-bashcurl -X POST "https://founder-lens-backend.victoriousstone-f6872aff.eastus.azurecontainerapps.io/query" \
+curl -X POST "https://founder-lens-backend.victoriousstone-f6872aff.eastus.azurecontainerapps.io/query" \
   -H "Content-Type: application/json" \
   -d '{"question": "QUESTION"}'
 
