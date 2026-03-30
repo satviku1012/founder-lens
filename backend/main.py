@@ -38,17 +38,7 @@ async def query_postmortems(req: QueryRequest):
         
     stream, citations_data = pipeline.run_query_stream(req.question)
     
-    # We yield citations first as a JSON chunk, then stream the answer
-    def event_stream():
-        # First yield the citations
-        citations_json = json.dumps({"type": "citations", "data": citations_data})
-        yield f"data: {citations_json}\n\n"
-        
-        # Then stream the answer chunks
-        for chunk in stream:
-            chunk_json = json.dumps({"type": "chunk", "text": chunk})
-            yield f"data: {chunk_json}\n\n"
+    # Wait for the stream to finish and combine into one answer
+    full_answer = "".join([chunk for chunk in stream])
             
-        yield "data: [DONE]\n\n"
-        
-    return StreamingResponse(event_stream(), media_type="text/event-stream")
+    return {"answer": full_answer, "citations": citations_data}

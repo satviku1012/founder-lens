@@ -3,3 +3,42 @@ backend/.venv/
 backend/__pycache__/
 *.pyc
 .DS_Store
+deploy.sh
+
+# Environment variables
+.env
+.env.local
+.env.*
+
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Node/Frontend
+node_modules/
+build/
+dist/
+.next/
+npm-debug.log*
+
+# Logs
+*.log
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store?
+._*
+Thumbs.db
