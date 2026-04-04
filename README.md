@@ -1,13 +1,20 @@
-Ask a question and get a full answer with cited sources:
+# FounderLens
 
-curl -X POST "https://founder-lens-backend.victoriousstone-f6872aff.eastus.azurecontainerapps.io/query" \ -H "Content-Type: application/json" \ -d '{"question": "QUESTION"}'
+AI-powered Q&A with cited sources.
 
-Test every endpoint in the browser (no curl needed):
+## Usage
+```bash
+curl -X POST "https://founder-lens-backend.victoriousstone-f6872aff.eastus.azurecontainerapps.io/query" \
+  -H "Content-Type: application/json" \
+  -d '{"question": "YOUR QUESTION HERE"}'
+```
+
+Or test all endpoints in the browser:  
 https://founder-lens-backend.victoriousstone-f6872aff.eastus.azurecontainerapps.io/docs
 
+## Stack
 
-Tech Stack
-	Backend: FastAPI
-	Agent: LangChain
-	DB: Pinecone
-	Deployment: Azure
+- **Backend:** FastAPI
+- **Agent:** LangChain
+- **DB:** Pinecone
+- **Deploy:** Azure
