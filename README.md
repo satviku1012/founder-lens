@@ -7,7 +7,7 @@ https://founder-lens-backend.victoriousstone-f6872aff.eastus.azurecontainerapps.
 
 
 Tech Stack
-Backend: FastAPI
-Agent: LangChain
-DB: Pinecone
-Deployment: Azure
+	Backend: FastAPI
+	Agent: LangChain
+	DB: Pinecone
+	Deployment: Azure
